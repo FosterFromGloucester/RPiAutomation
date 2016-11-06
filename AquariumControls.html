@@ -1,0 +1,77 @@
+wax you<html>
+        <head>
+                <meta-charset="UTF-8">
+                <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+                <script type = "text/javascript">
+                        $(document).ready(function(){
+                                $('#clickAquaOn').click(function(){
+                                        var a = new XMLHttpRequest();
+                                        a.open("GET","aquaOn.php");
+                                        a.onreadystatechange = function(){
+                                                if(a.readyState ==4){
+                                                        if(a.status == 200){
+                                                        }
+                                                        else{
+                                                                alert("Error");
+                                                        }
+                                                }
+                                        }
+                                        a.send();
+                                });
+                                $('#clickAquaOff').click(function(){
+                                        var a = new XMLHttpRequest();
+                                        a.open("GET","aquaOff.php");
+                                        a.onreadystatechange = function(){
+                                                if(a.readyState ==4){
+                                                        if(a.status == 200){
+                                                        }
+                                                        else{
+                                                                alert("Error");
+                                                        }
+                                                }
+                                        }
+                                        a.send();
+                                });
+                                $('#clickPlayerOn').click(function(){
+                                        var a = new XMLHttpRequest();
+                                        a.open("GET","playerOn.php");
+                                        a.onreadystatechange = function(){
+                                                if(a.readyState ==4){
+                                                        if(a.status == 200){
+                                                        }
+                                                        else{
+                                                                alert("Error");
+                                                        }
+                                                }
+                                        }
+                                        a.send();
+                                });
+                                $('#clickPlayerOff').click(function(){
+                                        var a = new XMLHttpRequest();
+                                        a.open("GET","playerOff.php");
+                                        a.onreadystatechange = function(){
+                                                if(a.readyState ==4){
+                                                        if(a.status == 200){
+                                                        }
+                                                        else{
+                                                                alert("Error");
+                                                        }
+                                                }
+                                        }
+                                        a.send();
+                                });
+                        });
+                </script>
+                <title> Pi Controller</title>
+        </head>
+        <body>
+                <h1>Aquarium</h1>
+                <button type="button" id="clickAquaOn">On</button>
+                <button type="button" id="clickAquaOff">Off</button><br>
+                <br>
+                <h1>Record Player<h1>
+                <button type="button" id="clickPlayerOn">On</button>
+                <button type="button" id="clickPlayerOff">Off</button><br>
+        </body>
+</html>
+
